@@ -7,6 +7,7 @@ import java.net.Socket;
 /**
  * Tomcat容器，循环接受用户请求，并作出响应
  *
+ *
  * Created by Ivan Lu on 2018/9/2.
  */
 public class TomcatServer {
@@ -18,10 +19,6 @@ public class TomcatServer {
                 Socket socket=ss.accept();
                 //开启一个线程，处理单次请求
                 new Thread(new Handler(socket)).start();
-
-
-
-
 
             }
         }catch (IOException e){
